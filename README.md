@@ -1,23 +1,23 @@
-Fork From https://github.com/itxstcom/qrcode
-上面版本存在幾個問題：
-1.數據庫
-直接使用作者安裝版本裡面的DB替換
-2.frBuild.cs
-161行，  修改 whhere 為 where
-3.frBuild.cs
-103行，修改ctrParameters1為ctrParameters2
-4.frBuild.cs
-114行，修改Comm.Func.HasData(ds) == false為Comm.Func.HasData(ds) == true
-5.frBuild.cs
-59行，加上初始化語句_Rule = new Datas.Rules();
-基本這樣就可以運行了，不可以的話，下面是全部完整的下載地址，要是有問題，歡迎找原作者。
-
-链接：https://pan.baidu.com/s/12nDCG8mpWKSTz8f2-s59yQ 
-提取码：wfja 
-
-我這邊使用的是VS2017
-=========================================================================================
-原文
+Fork From https://github.com/itxstcom/qrcode <br>
+上面版本存在幾個問題：<br>
+1.數據庫<br>
+直接使用作者安裝版本裡面的DB替換<br>
+2.frBuild.cs<br>
+161行，  修改 whhere 為 where<br>
+3.frBuild.cs<br>
+103行，修改ctrParameters1為ctrParameters2<br>
+4.frBuild.cs<br>
+114行，修改Comm.Func.HasData(ds) == false為Comm.Func.HasData(ds) == true<br>
+5.frBuild.cs<br>
+59行，加上初始化語句_Rule = new Datas.Rules();<br>
+基本這樣就可以運行了，不可以的話，下面是全部完整的下載地址，要是有問題，歡迎找原作者。<br>
+<br>
+链接：https://pan.baidu.com/s/12nDCG8mpWKSTz8f2-s59yQ <br>
+提取码：wfja <br><br>
+<br>
+我這邊使用的是VS2017<br>
+=========================================================================================<br>
+原文<br>
 
 # qrcode
 批量二维码生成工具
