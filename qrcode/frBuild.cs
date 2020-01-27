@@ -56,6 +56,7 @@ namespace QRCode
             }
             else
             {
+                _Rule = new Datas.Rules();
                 _Rule.Name = ds.Tables[0].Rows[0]["Name"] + "";
                 _Rule.Data = ds.Tables[0].Rows[0]["Data"] + "";
             }
@@ -99,7 +100,7 @@ namespace QRCode
             var num = int.Parse(txtNum.Text.Trim());
             var count = 0;
             var qrcode = new Code.QRCode();
-            var parm = ctrParameters1.QRParameters;
+            var parm = ctrParameters2.QRParameters;
             var dir = txtDir.Text.Trim().Replace("/","\\");
             var ext = parm.ImgType;
             if (dir.Substring(dir.Length - 1, 1) != "\\") dir = dir + "\\";
@@ -110,7 +111,7 @@ namespace QRCode
 
                 var ds = SQLiteHelper.ExecuteDataset(" select  *  from Data where RuleName='" + _RuleName + "' and Code='"+ Code + "' limit 1 ");
 
-                if (Comm.Func.HasData(ds) == false) continue;
+                if (Comm.Func.HasData(ds) == true) continue;
 
                 var rows = SQLiteHelper.ExecuteNonQuery("insert into Data(RuleName,Code)values('" + _RuleName + "','" + Code + "')");
 
