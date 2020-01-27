@@ -159,7 +159,7 @@ namespace QRCode
                 
 
                 item.Data = Comm.JsonHelper.GetJson(_ruleAuto);
-                SQLiteHelper.ExecuteNonQuery(" update Rules set  Data='"+ item.Data + "' whhere name='" + _RuleName + "' ");
+                SQLiteHelper.ExecuteNonQuery(" update Rules set  Data='"+ item.Data + "' where name='" + _RuleName + "' ");
 
             }
             if (rule.RuleType == "sj")
